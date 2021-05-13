@@ -17,11 +17,6 @@
     border-right: $border $border-color;
     align-items: flex-end;
   }
-
-  @include mq(lg) {
-    width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});
-    min-width: $nav-width;
-  }
 }
 
 .main {
@@ -29,12 +24,6 @@
     position: relative;
     max-width: $content-width;
     margin-left: $nav-width-md;
-  }
-
-  @include mq(lg) {
-    margin-left: calc(
-      (100% - #{$nav-width + $content-width}) / 2 + #{$nav-width}
-    );
   }
 }
 
@@ -52,7 +41,7 @@
 .main-header {
   z-index: 0;
   display: none;
-  background-color: $sidebar-color;
+  background: transparent !important;
 
   @include mq(md) {
     display: flex;
